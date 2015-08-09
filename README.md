@@ -37,6 +37,7 @@ ACCESS_SECRET:your_access_secret
 
 *Application Configuration:*
 - Defining Search terms for LiveStream
+-- Open StreamController.py
 -- Add desired search filters to look for in the data stream
 ```
     # Filter Data here
@@ -52,4 +53,26 @@ bieber
 quoted_status
 ```
 (You can also put in the json parameters from Twitter like "possibly_sensitive":true to block many adult post. Some will get through if the user isn't using Twitter properly.)
+
+*Builder Configuration:*
+- You can adjust the way the page looks from Builder.py (Leaving it will generate an example.htm file under the /site folder)
+- The name you use here will need to be the same name referenced in the FtpPush.py should you choose to use it.
+
 <hr>
+
+## Optional:
+The scripts call themselves so you can modify this by editting the StreamController.py 
+Remove the function calls inside the on_data function.
+```
+    Builder.build_func()
+    FtpPush.push_data()
+```
+
+## Usage:
+I am currently operating from a Linux System and start the program by going into the folder from terminal and run 
+```
+python StreamController.py
+```
+
+## Notes:
+If anyone does anything with this and would like to show me hit me up either here through github or mortal.glitch at omegaraven dot com.

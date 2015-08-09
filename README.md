@@ -1,14 +1,10 @@
 # Social-Art-Feed
 The Social Art Feed is designed to pull targetted livestream information from twitter and build a webpage out of the images from those post. 
 
-<hr>
-
 ## Requirements
 Social-Art-Feed uses the following:
 Python 2.7.6 (may work with other versions but this is what I tested with)
 Tweepy (To get Tweepy check out <a href:="https://github.com/tweepy/tweepy">https://github.com/tweepy/tweepy</a>)
-
-<hr>
 
 ## Description of Parts:
 - *StreamController.py:* Is the main portion of the application it utilizes Tweepy to gather information from twitter based on filter criteria. It then uses a second filter to remove anything that is unwanted from the data. With the data that remains it generates Output.txt. This portion also generates a backup of the text file for debugging information.
@@ -16,8 +12,6 @@ Tweepy (To get Tweepy check out <a href:="https://github.com/tweepy/tweepy">http
 - *FtpPush.py:* This is a very simple FtpPush script that will push the html file up to the choosen site of your choice.
 - *filter.txt:* This is the file where you put all the terms you do not want showing up on the page.
 - *Config.txt:* This file stores the twitter token information.
-
-<hr>
 
 ## Setup
 *Tweepy Config Set-Up:*
@@ -57,8 +51,6 @@ quoted_status
 *Builder Configuration:*
 - You can adjust the way the page looks from Builder.py (Leaving it will generate an example.htm file under the /site folder)
 - The name you use here will need to be the same name referenced in the FtpPush.py should you choose to use it.
-
-<hr>
 
 ## Optional:
 The scripts call themselves so you can modify this by editting the StreamController.py 

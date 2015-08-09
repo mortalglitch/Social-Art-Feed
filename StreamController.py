@@ -72,11 +72,11 @@ def main():
     text_file = open("Output.txt", "w")
     text_file.close()
 
-    #This handles Twitter authetification and the connection to Twitter Streaming API
+    # Handles Twitter Auth and the timeout between post
     l = StdOutListener()
     stream = Stream(auth, l, timeout=10)
 
-    #This filter will use the chosen data and will attempt to capture post with this information
+    # Filter Data here
     stream.filter(track=['#happy', '#life', '#love'])
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 # Social-Art-Feed
 The Social Art Feed is designed to pull targetted livestream information from twitter and build a webpage out of the images from those post. 
+Example of Output: <a href="http://omegaraven.com/testing_grounds/hashtagsmile/hashtagsmile.htm"> http://omegaraven.com/testing_grounds/hashtagsmile/hashtagsmile.htm </a>
 
 ## Requirements
 Social-Art-Feed uses the following:

@@ -37,15 +37,15 @@ ACCESS_SECRET:your_access_secret
 
 *Application Configuration:*
 - Defining Search terms for LiveStream
--- Open StreamController.py
--- Add desired search filters to look for in the data stream
+  - Open StreamController.py
+  - Add desired search filters to look for in the data stream
 ```
     # Filter Data here
     stream.filter(track=['#happy', '#life', '#love'])
 ```
 (Each term is closed in using ' and seperated with , so here you see by default we are looking for post containing #happy, #life, and #love)
 - Build the filter file which contains which terms to exclude.
--- Open filter.txt and add what you would like to filter out with each one on it's own line.
+  - Open filter.txt and add what you would like to filter out with each one on it's own line.
 ```
 retweeted_status
 #FOLLOWTRICK

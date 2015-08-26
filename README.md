@@ -69,3 +69,4 @@ python StreamController.py
 
 ## Notes:
 If anyone does anything with this and would like to show me hit me up either here through github or mortal.glitch at omegaraven dot com.
+There is no license at this time. Do with it as you please.

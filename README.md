@@ -1,3 +1,12 @@
+# Note
+This branch will be set up for the purpose of making Social-Art-Feed compatible with Python3.
+The current implementation only works with 2.7.6 which seems to trigger some issues with some devices if you try to update Python on them. I would rather this system be more of an out-of-the-box style solution.
+
+
+
+
+
+
 # Social-Art-Feed
 The Social Art Feed is designed to pull targetted livestream information from twitter and build a webpage out of the images from those post. 
 Example of Output: <a href="http://omegaraven.com/testing_grounds/hashtagsmile/hashtagsmile.htm"> http://omegaraven.com/testing_grounds/hashtagsmile/hashtagsmile.htm </a>

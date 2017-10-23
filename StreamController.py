@@ -31,7 +31,8 @@ class StdOutListener(StreamListener):
             text_file.close()
             filter_file.close()
             Builder.build_func()
-            FtpPush.push_data()
+            #Disabling FTPPush by default.
+            #FtpPush.push_data()
 
             print('Starting Timer')
             time.sleep(300)

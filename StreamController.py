@@ -40,7 +40,7 @@ class StdOutListener(StreamListener):
             #print('Starting Timer')
             #time.sleep(300)
             #print('Sleep Complete')
-            main()
+            #main()
             return False
 
     def on_error(self, status):

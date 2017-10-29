@@ -19,7 +19,7 @@ class StdOutListener(StreamListener):
         if any(x in data for x in filter_lines):
             print ("Data failed Check moving to next")
         else:
-            print data
+            print (data)
             #Editing to dump to text
             if 'media_url' in data:
                 text_file = open("Output.txt", "a")
@@ -44,7 +44,7 @@ class StdOutListener(StreamListener):
             return False
 
     def on_error(self, status):
-        print status
+        print (status)
 
 def main():
     config_file = open("Config.txt", "r")

@@ -1,5 +1,6 @@
 import tweepy, sys, time, shutil
-import Builder
+# Switching to NoEncodeBuilder until the encoding errors can be resolved
+import NoEncodeBuilder
 import FtpPush
 from tweepy.streaming import StreamListener
 from tweepy import Stream
@@ -16,9 +17,9 @@ class StdOutListener(StreamListener):
         filter_file = open("filter.txt", "r")
         filter_lines = [x.strip('\n') for x in filter_file.readlines()]
         if any(x in data for x in filter_lines):
-            print "Data failed Check moving to next"
+            print ("Data failed Check moving to next")
         else:
-            print data
+            print (data)
             #Editing to dump to text
             if 'media_url' in data:
                 text_file = open("Output.txt", "a")
@@ -30,17 +31,20 @@ class StdOutListener(StreamListener):
         else:
             text_file.close()
             filter_file.close()
-            Builder.build_func()
-            FtpPush.push_data()
+            NoEncodeBuilder.build_func()
+            #Disabling FTPPush by default.
+            #FtpPush.push_data()
 
-            print('Starting Timer')
-            time.sleep(300)
-            print('Sleep Complete')
-            main()
+            #Commenting out pause to prevent timer
+
+            #print('Starting Timer')
+            #time.sleep(300)
+            #print('Sleep Complete')
+            #main()
             return False
 
     def on_error(self, status):
-        print status
+        print (status)
 
 def main():
     config_file = open("Config.txt", "r")

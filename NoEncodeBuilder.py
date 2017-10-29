@@ -27,7 +27,7 @@ def build_func():
     source_file.close()
 
     # Conversion - there is probably a simpler way to do this but I'm doing it this way for now.
-    post1_Text = str(parsedPost1['text']
+    post1_Text = str(parsedPost1['text'])
     post1_Name = str(parsedPost1['user']['screen_name'])
     post1_ProfileLink = '<a target="_blank" href="https://twitter.com/'+ post1_Name + '">'
     post1_ImageLink = build_image_link(parsedPost1)
@@ -150,7 +150,7 @@ def build_image_link(post):
         post_ImageLink = str(post['extended_tweet']['entities']['media'][0]['media_url'])
         return post_ImageLink
     except:
-        post_ImageLink = str(post['entities']['media'][0][''media_url'])
+        post_ImageLink = str(post['entities']['media'][0]['media_url'])
         return post_ImageLink
 
 if __name__ == '__main__':

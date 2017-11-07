@@ -64,7 +64,7 @@ Remove the function calls inside the on_data function.
 ## Usage:
 I am currently operating from a Linux System and start the program by going into the folder from terminal and run
 ```
-python StreamController.py
+python3 StreamController.py
 ```
 
 ## Notes:
